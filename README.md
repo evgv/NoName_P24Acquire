@@ -1,4 +1,4 @@
-# Privatbank Privat24 payment extension
+# Privatbank Privat24 payment Magento extension
 The module allows you to pay for products online using a credit card via PrivatBank service Privat24.
 
 ### Features
