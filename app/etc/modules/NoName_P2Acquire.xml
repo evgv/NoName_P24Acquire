@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <NoName_P24Acquire>
+            <active>true</active>
+            <codePool>local</codePool>
+            <depends />
+        </NoName_P24Acquire>
+    </modules>
+</config>

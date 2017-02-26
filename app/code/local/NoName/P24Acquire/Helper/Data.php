@@ -1,0 +1,1 @@
+<?php/** * P24Acquire Helper * * @category   NoName * @package    NoName_P24Acquire * @author     https://github.com/evgv * @version    1.0.0 */class NoName_P24Acquire_Helper_Data extends Mage_Core_Helper_Abstract{    //}

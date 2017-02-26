@@ -1,0 +1,15 @@
+<?php /* @see NoName_P24Acquire_Block_Redirect */ ?>
+<?php /* @var $this NoName_P24Acquire_Block_Redirect */ ?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    </head>
+    <body>
+        <?php echo $this->__('You will be redirected to the Privat24 website in a few seconds.'); ?>
+        <?php echo $this->getForm()->toHtml(); ?>
+        
+        <script>document.getElementById("p24acquire_redirect").submit();</script>
+    </body>
+</html>

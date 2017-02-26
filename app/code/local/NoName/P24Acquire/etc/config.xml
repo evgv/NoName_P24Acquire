@@ -1,0 +1,92 @@
+<?xml version="1.0"?>
+    
+<config>
+    
+    <modules>
+       <NoName_P24Acquire>
+          <version>1.0.0</version>
+       </NoName_P24Acquire>
+    </modules>
+
+    <global>
+        <helpers>
+            <p24acquire>
+                <class>NoName_P24Acquire_Helper</class>
+            </p24acquire>
+        </helpers>
+        <blocks>
+            <p24acquire>
+                <class>NoName_P24Acquire_Block</class>
+            </p24acquire>
+        </blocks>
+        <models>
+            <p24acquire>
+                <class>NoName_P24Acquire_Model</class>
+            </p24acquire>
+        </models>
+    </global>
+
+    <frontend>
+        <secure_url>
+            <p24acquire_redirect>/p24acquire/payment/redirect/</p24acquire_redirect>
+        </secure_url>
+        <routers>
+            <p24acquire>
+                <use>standard</use>
+                <args>
+                    <module>NoName_P24Acquire</module>
+                    <frontName>p24acquire</frontName>
+                </args>
+            </p24acquire>
+        </routers>
+        <translate>
+            <modules>
+                <NoName_P24Acquire>
+                    <files>
+                        <default>NoName_P24Acquire.csv</default>
+                    </files>
+                </NoName_P24Acquire>
+            </modules>
+        </translate>
+    </frontend>
+    
+    <adminhtml>
+        <translate>
+            <modules>
+                <NoName_P24Acquire>
+                    <files>
+                        <default>NoName_P24Acquire.csv</default>
+                    </files>
+                </NoName_P24Acquire>
+            </modules>
+        </translate>
+    </adminhtml>
+    
+    <default>
+        <payment>
+            <p24acquire>
+                
+                <!--Default settings-->
+                <model>p24acquire/paymentMethod</model>
+                <active>0</active>
+                <title>Privat24</title>
+                <order_status>pending</order_status>
+                <payed_order_status>complete</payed_order_status>
+                <allowspecific>0</allowspecific>
+                <payment_action>sale</payment_action>
+                <sort_order>1</sort_order>
+                
+                <!--Privat24 settings-->
+                <action>https://api.privatbank.ua/p24api/ishop</action>
+                <!--<merchant_key backend_model="adminhtml/system_config_backend_encrypted" />-->
+                <currency>UAH</currency>
+                <language>UA</language>
+                
+                <!--Additional settings-->
+                <round>0</round>
+                <round_precision>2</round_precision>
+            </p24acquire>
+        </payment>
+    </default>
+
+</config>
